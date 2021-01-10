@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>> 
+<!-- wordpressの設定によって、言語使用を変える設定に。 -->
 
 <head>
   <?php get_header(); ?>
 </head>
 
-<body>
+<body　<?php body_class(); ?>>
+<!-- これを追加することで、ログインしている状態なのか、してない状態なのかがbodyタグのクラスから推測できるように -->
+
+  <?php wp_body_open(); ?>
 
   <!-- Navigation -->
   <?php get_template_part('includes/header'); ?>

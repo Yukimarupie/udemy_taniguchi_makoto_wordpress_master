@@ -9,7 +9,6 @@
 <body　<?php body_class(); ?>>
 <!-- これを追加することで、ログインしている状態なのか、してない状態なのかがbodyタグのクラスから推測できるように -->
 
-  <?php wp_body_open(); ?>
 
   <!-- Navigation -->
   <?php get_template_part('includes/header'); ?>
@@ -26,10 +25,6 @@
         $img = array(get_template_directory_uri() . '/img/post-bg.jpg');//アイキャッチが設定されていない場合はデフォルトでこれを表示するよ
       endif;
       ?>
-
-        
-
-
 
       <header class="masthead" style="background-image: url('<?php echo $img[0]; ?>')">
         <div class="overlay"></div>
@@ -67,7 +62,7 @@
   <?php endif; ?>
 
   <!-- Footer -->
-  <?php get_template_part('includes/header'); ?>
+  <?php get_template_part('includes/footer'); ?>
   <!-- 拡張子は不要 -->
 
   <?php get_footer(); ?>
